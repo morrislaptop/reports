@@ -1,4 +1,3 @@
-<?php echo $html->css('tables', false, false, false); ?>
 <div class="reportSqls index">
 <h2><?php __('ReportSql');?></h2>
 <?php echo $advindex->create('ReportSql'); ?>

@@ -2,7 +2,7 @@
 class ReportSqlsController extends ReportsAppController
 {
 	var $name = 'ReportSqls';
-	var $layout = 'app';
+	var $helpers = array('Advindex.Advindex');
 
 	function admin_index() {
 		$this->ReportSql->recursive = 0;
