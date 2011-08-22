@@ -12,8 +12,7 @@ class ReportSqlsController extends ReportsAppController
 	function admin_run($id)
 	{
 		$report = $this->ReportSql->read(null, $id);
-		$db =& ConnectionManager::getDataSource('default');
-		$results = $db->query($report['ReportSql']['sql']);
+		$results = $this->ReportSql->run($id);
 		$this->set(compact('report', 'results'));
 	}
 }

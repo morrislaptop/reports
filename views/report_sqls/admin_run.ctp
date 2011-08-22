@@ -13,7 +13,7 @@
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<?php
-						$fields = array_keys($results[0][0]);
+						$fields = array_keys($results[0]);
 						foreach ($fields as $field)
 						{
 							?>
@@ -28,7 +28,7 @@
 						?>
 						<tr>
 							<?php
-								foreach ($result[0] as $field => $value)
+								foreach ($result as $field => $value)
 								{
 									?>
 									<td><?php echo $value; ?></td>

@@ -1,8 +1,8 @@
 <div class="reportSqls index">
 <h2><?php __('ReportSql');?></h2>
-<?php echo $advindex->create('ReportSql'); ?>
+<?php echo $this->Advindex->create('ReportSql'); ?>
 <table cellpadding="0" cellspacing="0">
-	<?php echo $this->element('thead', array('plugin' => 'advindex')); ?>
+	<?php echo $this->element('thead', array('plugin' => 'advindex', 'include' => array('name'))); ?>
 	<tbody>
 		<?php
 		$i = 0;
@@ -13,9 +13,6 @@
 			}
 		?>
 			<tr<?php echo $class;?>>
-				<td>
-					<?php echo $reportSql['ReportSql']['id']; ?>
-				</td>
 				<td>
 					<?php echo $reportSql['ReportSql']['name']; ?>
 				</td>
