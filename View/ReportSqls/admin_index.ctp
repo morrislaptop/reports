@@ -1,8 +1,14 @@
 <div class="reportSqls index">
-<h2><?php __('ReportSql');?></h2>
+<h2><?php echo __('ReportSql');?></h2>
 <?php echo $this->Advindex->create('ReportSql'); ?>
+<div id="filler"></div>
 <table cellpadding="0" cellspacing="0">
-	<?php echo $this->element('thead', array('plugin' => 'advindex', 'include' => array('name'))); ?>
+	<thead>
+		<tr>
+			<th class="headerLeft">Name</th>
+			<th class="headerRight">&nbsp;</th>
+		</tr>
+	</thead>
 	<tbody>
 		<?php
 		$i = 0;
@@ -17,11 +23,10 @@
 					<?php echo $reportSql['ReportSql']['name']; ?>
 				</td>
 				<td class="actions">
-					<?php echo $html->link(__('Run', true), array('action'=>'run', $reportSql['ReportSql']['id'])); ?>
+					<?php echo $this->Html->link(__('Run', true), array('action'=>'run', $reportSql['ReportSql']['id']), array('class' => 'view')); ?>
 				</td>
 			</tr>
 		<?php endforeach; ?>
 	</tbody>
-	<?php echo $this->element('tfoot', array('plugin' => 'advindex')); ?>
 </table>
 </div>
