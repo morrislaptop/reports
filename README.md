@@ -20,4 +20,4 @@ Database
 
 From the console run
 
-	app/Console/cake schema create -p Settings
+	app/Console/cake schema create -p Reports
